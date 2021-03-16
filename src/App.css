@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Libre+Baskerville&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.homepage-container{
+  font-family: 'Playfair Display', serif;
+}
+
+/* styling for navigation bar starts here */
+
+.navigation{
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  max-width: 100%;
+  width: 100%;
+  height: 80px;
+}
+
+.logo-image{
+  margin: 7.5px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 0.2px solid whitesmoke;
+  transition: ease-in 0.2s;
+}
+
+.logo-image:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.navigation-sub>ul{
+  float: right;
+  margin-right: 20px;
+}
+
+.navigation-sub>ul>li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.navigation-sub>ul>li>a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 20px;
+  padding: 5px;
+  transition: all ease-in 0.3s;
+}
+
+.navigation-sub>ul>li>a:hover{
+  color: teal;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.check-btn{
+  font-size: 30px;
+  color: teal;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  transition: ease-in 0.2s;
+}
+
+.check-btn:hover{
+  font-size: 35px;
+}
+
+#check{
+  display: none;
+}
+
+/* styling for banner starts here */
+
+.pageBanner{
+  width: 100%;
+  height: 300px;
+}
+
+.bannerImage{
+  width:100%;
+  height: 80vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.introContent>.helloText{
+  font-size: 40px;
+  background: -webkit-linear-gradient(black,teal);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  padding: 10px;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.introContent>.nameText{
+  font-size: 35px;
+  background: -webkit-linear-gradient(teal,black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  position: absolute;
+  top: 160px;
+  left: 30px;
+  padding: 20px;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.introContent>.aboutMeText{
+  font-size: 25px;
+  background: -webkit-linear-gradient(teal,black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  position: absolute;
+  top: 220px;
+  left: 75px;
+  padding: 20px;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.pageBanner>.contentText{
+  font-size: 25px;
+  background: -webkit-linear-gradient(rgb(67, 117, 117),rgb(21, 13, 36));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 220px;
+  left: 162px;
+  padding: 20px;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+}
+
+
+@media (max-width: 880px){
+  .logo-image{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+  }
+
+  .navigation-sub>ul>li>a{
+    font-size: 17.5px;
+  }
+
+  /* styling of banner section starts here */
+
+  .bannerImage{
+    height: 65vh;
+  }
+}
+
+@media (max-width: 750px){
+  .check-btn{
+    display: block;
+  }
+
+  .navigation-sub>ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #2C5362, #203A40, #0F2027);
+    top: 80px;
+    left: 100%;
+    text-align: center;
+    transition: all ease-in 0.5s;
+  }
+
+  .navigation-sub>ul>li{
+    margin: 50px 0;
+    line-height: 30px;
+    display: block;
+  }
+
+  .navigation-sub>ul>li>a{
+    font-size: 20px;
+    transition: all ease-in 0.2s;
+  }
+
+  .navigation-sub>ul>li>a:hover,.navigation-sub>ul>li>a:active{
+    background: none;
+    color: teal;
+    transform: scale(1.2);
+    font-size: 24px;
+  }
+
+  #check:checked ~ .pageBanner{
+    opacity: 0.25;
+  }
+
+  #check:checked ~ ul{
+    left: 0;
+    z-index: 2;
+  }
+
+  /* styling of banner section starts here */
+
+  .bannerImage{
+      height: 55vh;
+  }
+
+  .introContent>.helloText{
+    font-size: 35px;
+  }
+
+  .introContent>.nameText{
+    font-size: 30px;
+  }
+
+  .introContent>.aboutMeText{
+    font-size: 20px;
+  }
+
+  .pageBanner>.contentText{
+    font-size: 20px;
+    padding-left: 5px;
+
+  }
+}
+
+@media (max-width: 650px){
+  /* styling of banner section starts here */
+  .bannerImage{
+    height: 50vh;
+  }
+
+  .introContent>.helloText{
+    font-size: 30px;
+  }
+
+  .introContent>.nameText{
+    font-size: 25px;
+  }
+
+  .introContent>.aboutMeText{
+    font-size: 15px;
+    left: 88px;
+  }
+
+  .pageBanner>.contentText{
+    font-size: 15px;
+    padding-left: 0px;
+  }
+
+}
+
+@media (max-width: 450px){
+  .bannerImage{
+    height: 45vh;
+  }
+}
